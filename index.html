@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+            color: rgb(24, 136, 130);
+        }
+        #hours,#minuites,#seconds{
+            height: 25vh;
+            width: 20vw;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #stopwatch{
+            display: flex;
+            align-items:center;
+           justify-content: space-around;
+
+        }
+        #buttons{
+            display: flex;
+            height: 100px;
+            width: 80vw;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding-left: 7vw;
+
+        }
+        button{
+            height: 75px;
+            border-radius: 15% 15% 10% 10%;
+            width: 15vw;
+            background-color: rgb(132, 124, 124);
+            color: white;
+            font-size: larger;
+
+        }
+        button:hover{
+            background-color: rgb(57, 53, 53);
+        }
+        button:disabled{
+            background-color: rgb(127, 57, 57);
+            cursor: not-allowed;
+            text-decoration:line-through;
+
+        }
+        
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <h1 style="margin-bottom: 50px; padding: 30px; align-self: center;border:3px solid rgba(255, 255, 255, 0.5); border-radius: 15%; ">STOP WATCH</h1>
+    <div id="stopwatch">
+    <div id="hours"><h2>hours</h2></div>
+    <div id="minuites"><h2>minuites</h2></div>
+    <div id="seconds"><h2>seconds</h2></div>
+    </div>
+    <div id="buttons">
+    <button onclick="start()" id="start" >start</button>
+    <button onclick="stop()" id="stop" disabled>stop</button>
+    <button onclick="pause()"  id="pause"  disabled>pause</button>
+    <button onclick="resume()" id="resume" disabled>resume</button>
+</div>
+    <footer style="color: white; background-color: rgb(48, 48, 46);text-align: center; align-self: normal;">
+        @copyright 2024
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
